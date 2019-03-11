@@ -1,92 +1,49 @@
-#### CFPB Open Source Project Template Instructions
+# Jira Date Plugin
 
-1. Create a new project.
-2. [Copy these files into the new project](#installation)
-3. Update the README, replacing the contents below as prescribed.
-4. Add any libraries, assets, or hard dependencies whose source code will be included
-   in the project's repository to the _Exceptions_ section in the [TERMS](TERMS.md).
-  - If no exceptions are needed, remove that section from TERMS.
-5. If working with an existing code base, answer the questions on the [open source checklist](opensource-checklist.md)
-6. Delete these instructions and everything up to the _Project Title_ from the README.
-7. Write some great software and tell people about it.
-
-> Keep the README fresh! It's the first thing people see and will make the initial impression.
-
-## Installation
-
-To install all of the template files, run the following script from the root of your project's directory:
-
-```
-bash -c "$(curl -s https://raw.githubusercontent.com/CFPB/development/master/open-source-template.sh)"
-```
-
-----
-
-# Project Title
-
-**Description**:  Put a meaningful, short, plain-language description of what
-this project is trying to accomplish and why it matters.
-Describe the problem(s) this project solves.
-Describe how this software can improve the lives of its audience.
+**Description**:  This plugin allows current date/time stamping of custom date fields and custom date time fields on transition of a Jira ticket by way of a post function.
 
 Other things to include:
 
-  - **Technology stack**: Indicate the technological nature of the software, including primary programming language(s) and whether the software is intended as standalone or as a module in a framework or other ecosystem.
-  - **Status**:  Alpha, Beta, 1.1, etc. It's OK to write a sentence, too. The goal is to let interested people know where this project is at. This is also a good place to link to the [CHANGELOG](CHANGELOG.md).
-  - **Links to production or demo instances**
-  - Describe what sets this apart from related-projects. Linking to another doc or page is OK if this can't be expressed in a sentence or two.
-
-
-**Screenshot**: If the software has visual components, place a screenshot after the description; e.g.,
-
-![](https://raw.githubusercontent.com/cfpb/open-source-project-template/master/screenshot.png)
+  - **Technology stack**: This plugin is written in Java and is intended for use with Jira Server software.
+  - **Status**: This project is stable and at a version 1.0.0 release.
 
 
 ## Dependencies
 
-Describe any dependencies that must be installed for this software to work.
-This includes programming languages, databases or other storage mechanisms, build tools, frameworks, and so forth.
-If specific versions of other software are required, or known not to work, call that out.
+To use this plugin you must have Jira Server.
+
+To work on this plugin you must have Java installed, as well as the Atlassian Plugin SDK.
 
 ## Installation
 
-Detailed instructions on how to install, configure, and get the project running.
-This should be frequently tested to ensure reliability. Alternatively, link to
-a separate [INSTALL](INSTALL.md) document.
-
-## Configuration
-
-If the software is configurable, describe it in detail, either here or in other documentation to which you link.
+Details for installation can be found in the [INSTALL](INSTALL.md) document.
 
 ## Usage
 
-Show users how to use the software.
-Be specific.
-Use appropriate formatting when showing code snippets.
+To use this feature in Jira server you must have a custom date or a custom date time field created.
 
-## How to test the software
-
-If the software includes automated tests, detail how to run those tests.
+Navigate to the workflow and then the transition you want to add this post function to.
+Under the 'Post Function' tab click add post function.
+Select the post function titled 'Update Custom Field with current date Post Function' and click 'Add'.
+On the next screenput the id of the custom date or date time field you would like the post function to stamp.
+    It should resemble 'customfield_13701'.
+Then click 'Add' one last time.
+If that is all the changes you would like to make to the workflow you can then publish the workflow.
+Now the custom field will be populated when stories go through that transition that use that workflow.
 
 ## Known issues
 
-Document any known significant shortcomings with the software.
+You can only include one Post function of this type per transition.
 
 ## Getting help
-
-Instruct users how to get help with this software; this might include links to an issue tracker, wiki, mailing list, etc.
-
-**Example**
 
 If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker.
 
 ## Getting involved
 
-This section should detail why people should get involved and describe key areas you are
-currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building
-important pieces, etc.
+This project has a lot of room to grow. Some of the upcoming features to be implimented are: Adding custom fields via name instead of id, being able to stamp other dates besides just the current date, and being able to add multiple post functions of this type to a transition.
 
-General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](CONTRIBUTING.md).
+General instructions on _how_ to contribute are available in the [CONTRIBUTING](CONTRIBUTING.md) document.
 
 
 ----
@@ -95,12 +52,3 @@ General instructions on _how_ to contribute should be stated with a link to [CON
 1. [TERMS](TERMS.md)
 2. [LICENSE](LICENSE)
 3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)
-
-
-----
-
-## Credits and references
-
-1. Projects that inspired you
-2. Related projects
-3. Books, papers, talks, or other sources that have meaningful impact or influence on this project
