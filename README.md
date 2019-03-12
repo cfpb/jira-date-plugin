@@ -1,6 +1,6 @@
 # Jira Date Plugin
 
-**Description**:  This plugin allows current date/time stamping of custom date fields and custom date time fields on transition of a Jira ticket by way of a post function.
+**Description**:  This plugin allows current date/time stamping of custom date fields and custom date time fields within Jira workflows. On transition of a Jira ticket this plugin is available as a post function.
 
 Other things to include:
 
@@ -22,14 +22,14 @@ Details for installation can be found in the [INSTALL](INSTALL.md) document.
 
 To use this feature in Jira server you must have a custom date or a custom date time field created.
 
-Navigate to the workflow and then the transition you want to add this post function to.
+Navigate to the workflow this is to be added to and select the transition where this date time stamp should occur.
 Under the 'Post Function' tab click add post function.
 Select the post function titled 'Update Custom Field with current date Post Function' and click 'Add'.
-On the next screenput the id of the custom date or date time field you would like the post function to stamp.
+On the next screen, put the id of the custom date or date time field you would like the post function to stamp.
     It should resemble 'customfield_13701'.
-Then click 'Add' one last time.
+Then click 'Add'.
 If that is all the changes you would like to make to the workflow you can then publish the workflow.
-Now the custom field will be populated when stories go through that transition that use that workflow.
+Now the custom field will be stamped when stories that use that workflow go through that transition.
 
 ## Known issues
 
