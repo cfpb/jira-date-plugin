@@ -5,4 +5,4 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ## 1.0.0 - 2019-03-11
 
 ### Added
-- The initial files to the repository for the Jira Plugin.
+- The initial files to the repository for the Jira Date Stamp Plugin.
