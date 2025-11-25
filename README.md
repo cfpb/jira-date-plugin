@@ -1,12 +1,13 @@
 # Jira Date Plugin
 
+This project is archived and no longer maintained.
+
 **Description**:  This plugin allows current date/time stamping of custom date fields and custom date time fields within Jira workflows. On transition of a Jira ticket this plugin is available as a post function within the workflow.
 
 Other things to include:
 
   - **Technology stack**: This plugin is written in Java and is intended for use with Jira Server software.
   - **Status**: This project is stable and at a version 1.0.0 release.
-
 
 ## Dependencies
 
